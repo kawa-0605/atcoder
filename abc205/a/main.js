@@ -1,3 +1,8 @@
-function Main(input) {
+function main(input) {
+    const [a, b] = input.trim().split(" ")
+
+    const num = a * b / 100
+    console.log(num)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
