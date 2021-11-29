@@ -1,3 +1,8 @@
-function Main(input) {
+function main(input) {
+    const [a, b, c] = input.trim().split(" ").map(Number)
+
+    const ans = a - b + c
+    console.log(ans)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
