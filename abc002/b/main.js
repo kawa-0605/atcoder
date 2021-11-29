@@ -1,3 +1,6 @@
-function Main(input) {
+function main(input) {
+    const a = input.trim().split(' ')
+    const str = a[0].replace(/[aiueo]/g, '')
+    console.log(str)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
