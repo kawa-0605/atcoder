@@ -1,3 +1,9 @@
-function Main(input) {
+function main(input) {
+    if (input.match(/[a-z]/)) {
+        console.log('a')
+    } else if(input.match(/[A-Z]/)) {
+        console.log('A')
+    }
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
