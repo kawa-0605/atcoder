@@ -1,3 +1,11 @@
-function Main(input) {
+function main(input) {
+    const a = input.trim().split(" ")
+
+    let num = 0
+    if (a % 1000 !== 0) {
+        num = 1000 - a % 1000
+    }
+    console.log(num)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
