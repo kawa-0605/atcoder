@@ -1,3 +1,11 @@
-function Main(input) {
+function main(input) {
+    const [a, b, c] = input.trim().split(" ").map(Number)
+
+    if ((a === b && a !== c) || (a === c && a !== b) || (b === c && b !== a)) {
+        console.log('Yes')
+    } else {
+        console.log('No')
+    }
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
