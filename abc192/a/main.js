@@ -1,3 +1,5 @@
-function Main(input) {
+function main(input) {
+    console.log(100 - input % 100)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
