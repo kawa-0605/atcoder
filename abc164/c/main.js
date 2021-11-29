@@ -1,3 +1,7 @@
-function Main(input) {
+function main(input) {
+    let arr = input.trim().split("\n").slice(1)
+    arr = Array.from(new Set(arr))
+    console.log(arr.length)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
