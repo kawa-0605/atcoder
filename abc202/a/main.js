@@ -1,3 +1,8 @@
-function Main(input) {
+function main(input) {
+    const [a, b, c] = input.trim().split(" ")
+    const num = 21 - a - b - c
+    
+    console.log(num)
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+main(require("fs").readFileSync("/dev/stdin", "utf8"))
