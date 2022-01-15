@@ -129,3 +129,185 @@ Math.round(4.2); // 4
 Math.round(-4.7); // -5
 Math.round(-4.2); // -4
 ```
+
+#  java
+
+## 文字列
+```Java
+String str = "文字列"
+
+// 長さ
+str.length();
+// startからend-1の切り取り
+str.subString(start, end);
+// 同値判定
+str1.equals(str2);
+// 比較
+str1.compareTo(str2)
+
+// String -> char i番目の文字
+char c = str.charAt(i);
+// String -> char 全体
+char[] cs = str.toCharArray();
+```
+
+## 型変換
+```Java
+// String -> int
+int i = Integer.parseInt(str);
+// double -> int
+int i = (int) d;
+
+// String -> double
+double d = Double.parseDouble(str);
+// int -> double
+double d = (double) i;
+
+// int -> String
+String s = String.valueOf(i);
+// double -> String
+String s = String.valueOf(d);
+```
+
+## 数値処理
+```Java
+// 大きい方
+Math.max(2, 5); // 5
+// 小さい方
+Math.min(2, 5); //2
+// 絶対値
+Math.abs(-3); //3
+
+// 切り上げ
+Math.ceil(1.5); // 2.0
+// 切り捨て
+Math.floor(1.5); // 1.0
+// 四捨五入
+Math.round(1.5); // 2.0
+
+// 累乗
+Math.pow(2, 10); // 1024
+// 平方根
+Math.sqrt(2); // 1.414...
+// 常用対数
+Math.log10(1000); // 3
+
+// 円周率
+Math.PI // Π
+// 自然対数の底
+Math.E // e
+```
+
+## 制御構文
+```Java
+// if
+if (i > 0) {
+
+} else if (i < 0) {
+
+} else {
+
+}
+
+// for / for-each
+for (int i = 0; i < max; i++) {
+
+}
+
+for (var : collection) {
+
+}
+
+// while / do-while
+while(i > 0) {
+
+}
+
+do {
+
+} while(i > 0);
+
+// switch
+switch (i) {
+  case 0:
+    break;
+  case 1:
+    break;
+  default:
+
+}
+```
+
+## 配列
+```Java
+// 一次元配列
+// 初期化
+int[] num = new int[10];
+Arrays.fill(num, 0);
+
+// ディープコピー
+String[] copySrc = new String[10];
+String[] copyDst = new String[10];
+copyDst = Arrays.copyOf(copySrc, sopySrc.length);
+
+// 多次元配列
+// 初期化
+int[][] num = new int[10][10];
+for (int i = 0; i < num.length; i++) {
+  Arrays.fill(num[i], 0);
+}
+
+// ディープコピー
+String[][] copySrc = new String[10][10];
+String[][] copyDst = new String[10][10];
+for (int i = 0; i < copySrc.length; i++) {
+  copyDst[i] = Arrays.copyOf(copySrc[i], copySrc[i].length);
+}
+```
+
+## リスト
+```Java
+// 初期化
+List<String> list = new ArrayList<String>();
+
+// オジェクトによる操作
+// 追加
+list.add(str);
+// 削除
+list.remove(str);
+// インデックス取得
+list.indexOf(str);
+// 存在チェック
+list.contains(str);
+
+// インデックスによる操作
+// i番目を取得
+list.get(i);
+// i番目を置換
+list.set(i, str);
+```
+
+## ハッシュマップ
+```Java
+// 初期化
+HashMap<Integer, String> hMap = new HashMap<Integer, String>();
+
+// 追加
+hMap.put(i, str);
+// 取得
+hMap.get(i);
+// 存在チェック
+hMap.containsKey(i);
+```
+
+## 優先度キュー
+```Java
+PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>();
+
+// 追加
+pQueue.offer(i);
+// 取得(キューから削除しない)
+pQueue.peek(i);
+// 取得(キューから削除する)
+pQueue.poll(i);
+```
